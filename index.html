@@ -36,3 +36,80 @@
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7552610394573059"
      crossorigin="anonymous"></script>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App with Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <!-- City Input Form -->
+        <input type="text" id="cityInput" placeholder="Enter City" />
+        <button onclick="getWeather()">Get Weather</button>
+
+        <!-- Weather Info Display -->
+        <div id="weatherInfo">
+            <h2 id="cityName"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p id="humidity"></p>
+            <p id="windSpeed"></p>
+        </div>
+
+        <!-- Timetable Section -->
+        <div class="timetable">
+            <h2>Your Timetable</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example timetable rows -->
+                    <tr>
+                        <td>Monday</td>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>Math Class</td>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>10:30 AM - 11:30 AM</td>
+                        <td>Science Class</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>9:00 AM - 10:00 AM</td>
+                        <td>History Class</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>11:00 AM - 12:00 PM</td>
+                        <td>Art Class</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+                </table>
+        </div>
+
+        <!-- Error Message -->
+        <p id="errorMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+                
