@@ -43,3 +43,29 @@ function getWeather() {
             console.error("Error fetching weather data:", error);
         });
 }
+
+
+
+              // Function to save event to localStorage
+function saveEvent(day, time, event) {
+    let timetable = JSON.parse(localStorage.getItem('timetable')) || [];
+    timetable.push({ day, time, event });
+    localStorage.setItem('timetable', JSON.stringify(timetable));
+}
+
+// Function to load events from localStorage
+function loadTimetable() {
+    let timetable = JSON.parse(localStorage.getItem('timetable')) || [];
+    const tableBody = document.querySelector('table tbody');
+    tableBody.innerHTML = ''; // Clear current table content
+
+    timetable.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>item.day</td><td>{item.time}</td><td>${item.event}</td>`;
+        tableBody.appendChild(row);
+    });
+}
+
+// Example of adding an event and loading the timetable
+saveEvent('Monday', '10:00 AM - 11:00 AM', 'JavaScript Class');
+loadTimetable();
